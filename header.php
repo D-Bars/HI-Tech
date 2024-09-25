@@ -11,29 +11,33 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header>
-        <?php 
+        <?php
         global $post;
-        $slider = get_posts( array(
+        $slider = get_posts(array(
             'post_type' => 'slider',
-        ) );
+        ));
         ?>
 
-        <?php if( $slider ) : ?>
-        <div class="header__slider">
-            <div class="header__slider__body">
-                <?php $i = 1; foreach ( $slider as $post) : setup_postdata( $post ); ?>
-                <div class="header__slider__item__wrapper">
-                    <div class="header__slider__mask"></div><img
-                        src="<?php the_post_thumbnail_url('full'); ?>" alt="HeaderSlide<?php echo $i ?>">
+        <?php if ($slider): ?>
+            <div class="header__slider">
+                <div class="header__slider__body">
+                    <?php $i = 1;
+                    foreach ($slider as $post):
+                        setup_postdata($post); ?>
+                        <div class="header__slider__item__wrapper">
+                            <div class="header__slider__mask"></div><img src="<?php the_post_thumbnail_url('full'); ?>" data-id="<?php echo $i; ?>"
+                                alt="HeaderSlide<?php echo $i ?>">
+                        </div>
+                        <?php $i += 1; endforeach; ?>
                 </div>
-                <?php $i += 1; endforeach; ?>
-                <div class="header__slider__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>'/assets/img/slide1.jpg'" alt="HeaderSlide2"></div>
+                <div class="header__slider__nav">
+                    <?php $i = 1;
+                    foreach ($slider as $post):
+                        setup_postdata($post); ?>
+                        <div class="header__slider__nav__dot <?php echo ($i == 1) ? 'active__slider__dot' : '' ?> " data-id="<?php echo $i; ?>"></div>
+                        <?php $i += 1; endforeach; ?>
+                </div>
             </div>
-            <div class="header__slider__nav">
-                <div class="header__slider__nav__dot active__slider__dot" data-id=""></div>
-                <div class="header__slider__nav__dot" data-id=""></div>
-            </div>
-        </div>
         <?php endif; ?>
         <div class="header__line">
             <a href="<?php echo home_url(); ?>">
@@ -54,4 +58,3 @@
             </div>
         </div>
     </header>
-<?php wp_dump($slider); ?>
