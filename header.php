@@ -17,12 +17,16 @@
             'post_type' => 'slider',
         ) );
         ?>
+
+        <?php if( $slider ) : ?>
         <div class="header__slider">
             <div class="header__slider__body">
+                <?php $i = 1; foreach ( $slider as $post) : setup_postdata( $post ); ?>
                 <div class="header__slider__item__wrapper">
                     <div class="header__slider__mask"></div><img
-                        src="<?php echo get_template_directory_uri(); ?>'/assets/img/slide1.jpg'" alt="HeaderSlide1">
+                        src="<?php the_post_thumbnail_url('full'); ?>" alt="HeaderSlide<?php echo $i ?>">
                 </div>
+                <?php $i += 1; endforeach; ?>
                 <div class="header__slider__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>'/assets/img/slide1.jpg'" alt="HeaderSlide2"></div>
             </div>
             <div class="header__slider__nav">
@@ -30,6 +34,7 @@
                 <div class="header__slider__nav__dot" data-id=""></div>
             </div>
         </div>
+        <?php endif; ?>
         <div class="header__line">
             <a href="<?php echo home_url(); ?>">
                 <div class="header__logo__wrapper"><img
@@ -49,3 +54,4 @@
             </div>
         </div>
     </header>
+<?php wp_dump($slider); ?>
