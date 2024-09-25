@@ -9,7 +9,7 @@ add_action('wp_enqueue_scripts', function(){
 
 add_action('after_setup_theme', function(){
     load_theme_textdomain('hi-tech', get_template_directory() . '/languages');
-    add_theme_support('post-thumbnail');
+    add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
 
     register_nav_menus( array(
@@ -17,4 +17,9 @@ add_action('after_setup_theme', function(){
     ) );
 });
 
+function wp_dump( $data ) {
+	echo "<pre>" . print_r( $data, 1 ) . "</pre>";
+}
+
 require_once get_template_directory() . '/incs/class-theme-header-menu.php';
+require_once get_template_directory() . '/incs/cpt.php';

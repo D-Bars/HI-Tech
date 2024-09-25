@@ -11,6 +11,12 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header>
+        <?php 
+        global $post;
+        $slider = get_posts( array(
+            'post_type' => 'slider',
+        ) );
+        ?>
         <div class="header__slider">
             <div class="header__slider__body">
                 <div class="header__slider__item__wrapper">
