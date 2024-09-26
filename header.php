@@ -15,11 +15,12 @@
         global $post;
         $slider = get_posts(array(
             'post_type' => 'slider',
+            'numberposts' => -1
         ));
         ?>
 
         <?php if ($slider): ?>
-            <div class="header__slider">
+            <div class="header__slider" id="SliderDot">
                 <div class="header__slider__body">
                     <?php $i = 1;
                     foreach ($slider as $post):
