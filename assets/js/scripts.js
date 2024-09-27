@@ -1,7 +1,7 @@
 class Slider {
 
     pointer = 1;
-    autoSlideBlock = false;
+    slideBlocker = false;
 
     constructor(sliderId, dotSlider) {
         this.slider = jQuery('#' + sliderId);
@@ -62,7 +62,7 @@ class Slider {
     autoScroll() {
         setInterval(() => {
             if (this.dotSlider && this.pointer <= this.sliderItemsCount) {
-                if (this.autoSlideBlock == false) {
+                if (this.slideBlocker == false) {
                     this.autoSwitchDot(this.pointer);
                 }
             }else{

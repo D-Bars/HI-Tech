@@ -41,9 +41,8 @@
             </div>
         <?php endif; ?>
         <div class="header__line">
-            <a href="<?php echo home_url(); ?>">
-                <div class="header__logo__wrapper"><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="HeaderLogo"></div>
+            <a class="header__logo__wrapper" href="<?php echo home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="HeaderLogo">
             </a>
             <?php wp_nav_menu(array(
                 'theme_location' => 'header-menu',
@@ -52,10 +51,10 @@
                 'menu_class' => 'header__menu',
                 'walker' => new Theme_Header_Menu(),
             )); ?>
-            <div class="header__center">
-                <h1 class="header__center__h1"></h1>
-                <div class="header__center__description"></div>
-                <div class="header__center__btn"></div>
-            </div>
+        </div>
+        <div class="header__center">
+            <h1 class="header__center__h1"></h1>
+            <div class="header__center__description"></div>
+            <div class="header__center__btn"></div>
         </div>
     </header>
