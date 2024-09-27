@@ -20,9 +20,11 @@ class Slider {
     }
 
     sliderGo(positionNum, itemNum) {
-        this.sliderLine.animate({ 'left': '-' + (positionNum * this.sliderItemWidth) }, 500, () => {
+        this.sliderLine.animate({ 'left': '-' + (positionNum * this.sliderItemWidth) }, 1000, () => {
             this.pointer = itemNum;
             this.setActiveDot();
+            console.log('pointer:' + this.pointer);
+            console.log('position:' + positionNum);
         });
     }
 
@@ -40,13 +42,13 @@ class Slider {
         if(dotPointer != 1){
             this.sliderGo(dotPointer - 1, dotPointer);
         }else{
-            this.sliderGo(dotPointer - 2, dotPointer);
+            this.sliderGo(dotPointer - 1, dotPointer);
         }
     }
 
     autoSwitchDot(dotPointer) {
         if(dotPointer > 1){
-            this.sliderGo(dotPointer - 1, dotPointer + 1);
+            this.sliderGo(dotPointer, dotPointer + 1);
         }else{
             this.sliderGo(dotPointer, dotPointer + 1);
         }
@@ -61,7 +63,7 @@ class Slider {
 
     autoScroll() {
         setInterval(() => {
-            if (this.dotSlider && this.pointer <= this.sliderItemsCount) {
+            if (this.dotSlider && this.pointer < this.sliderItemsCount) {
                 if (this.slideBlocker == false) {
                     this.autoSwitchDot(this.pointer);
                 }

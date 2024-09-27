@@ -26,6 +26,7 @@
                     foreach ($slider as $post):
                         setup_postdata($post); ?>
                         <div class="header__slider__item__wrapper">
+                            <div class="numeric__title"><?php echo get_the_title(); ?></div>
                             <div class="header__slider__mask"></div><img src="<?php the_post_thumbnail_url('full'); ?>" data-id="<?php echo $i; ?>"
                                 alt="HeaderSlide<?php echo $i ?>">
                         </div>
