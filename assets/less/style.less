@@ -342,6 +342,14 @@ header {
     gap: 1.5vw;
 }
 
+.logo__text{
+    .text(120%, 800, #FFF);
+
+    &:hover{
+        text-shadow: 10px 5px 6px @color3;
+    }
+}
+
 .header__menu__item {
     .text(100%, 600, @color3);
     transition: .1s;
@@ -350,17 +358,4 @@ header {
         transform: scale(1.05);
         text-shadow: 10px 5px 6px @color3;
     }
-}
-
-.header__center {
-    position: relative;
-    z-index: 2;
-}
-
-.numeric__title{
-    .text(150%, 600, #FFF);
-    position: relative;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
 }

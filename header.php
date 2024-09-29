@@ -42,7 +42,11 @@
         <?php endif; ?>
         <div class="header__line">
             <div class="header__logo__wrapper"><a href="<?php echo home_url(); ?>">
-                <?php the_custom_logo(); ?>
+                <?php if(function_exists( 'the_custom_logo' ) && has_custom_logo()): 
+                     the_custom_logo(); ?>
+                <?php else: ?>
+                    <div class="logo__text"><?php bloginfo('name'); ?></div>
+                <?php endif ?>
             </a></div>
             <?php wp_nav_menu(array(
                 'theme_location' => 'header-menu',
