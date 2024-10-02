@@ -500,3 +500,50 @@ header {
     .box(31.5%);
 }
 
+.single__service__item{
+    .box(100%, 2.5%);
+    .flex__box(row);
+    margin-top: 3vw;
+    gap: 5%;
+}
+
+.single__service__item__wrapper__img{
+    .img_box(45%);
+    align-items: stretch;
+}
+
+.single__service__item__content__box{
+    .box(50%);
+    .flex__box(column);
+    position: relative;
+    gap: 3vw;
+}
+
+.single__service__item__title{
+    .text(200%, 800, @color1);
+    text-align: center;
+}
+
+.single__service__item__description{
+    .text(130%, 600, @color1);
+    padding-bottom: 5vw;
+}
+
+.order__service{
+    .box(35%, 2.5%);
+    .text(110%, 600, @color1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: fade(@color2, 60%);
+    padding: 1vw 2.5%;
+    transition: .5s;
+
+    &:hover{
+        color: #FFF;
+        text-shadow: 10px 5px 6px @color1;
+        background-color: fade(@color2, 90%);
+    }
+}
