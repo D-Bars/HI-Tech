@@ -19,20 +19,20 @@ $services_count = count($services);
             nulla, obcaecati nobis.', 'hi-tech') ?></div>
             </div>
             <?php if ($services_count > 3): ?>
-                <div class="all__services__link"><a href="#"><?php _e('All services', 'hi-tech'); ?></a></div>
+                <div class="all__services__link"><a href="<?php echo get_post_type_archive_link('services'); ?>"><?php _e('All services', 'hi-tech'); ?></a></div>
             <?php endif; ?>
         </div>
         <div class="services__items__box">
             <?php
             foreach ($services as $post):
                 setup_postdata($post);
-                $service_title = get_the_title();
                 $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
                 ?>
                 <div class="services__item">
                     <div class="services__item__wrapper__img"><img src="<?php the_post_thumbnail_url('full') ?>"
                             alt="<?php the_title(); ?>"></div>
-                    <div class="services__item__title"><?php printf(__('%s', 'hi-tech'), $service_title); ?></div>
+                    <a class="services__item__title"
+                    href="<?php the_permalink(); ?>"><?php get__localize__title(get_the_ID()) ?></a>
                     <div class="services__item__description"><?php printf(__('%s', 'hi-tech'), $trimmed_content); ?></div>
                     <div class="services__item__read__more__box">
                         <div class="services__item__read__more"><a

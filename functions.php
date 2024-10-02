@@ -23,6 +23,15 @@ add_action('after_setup_theme', function(){
     ) );
 });
 
+function get__localize__title($objId) {
+    $obj_title = get_the_title($objId);
+    return printf(__('%s', 'hi-tech'), $obj_title);
+}
+function get__localize__content($objId) {
+    $obj_content = get_the_content($objId);
+    return printf(__('%s', 'hi-tech'), $obj_content);
+}
+
 function wp_dump( $data ) {
 	echo "<pre>" . print_r( $data, 1 ) . "</pre>";
 }

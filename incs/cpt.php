@@ -84,5 +84,6 @@ add_action( 'init', function () {
             'supports'     => array( 'title', 'editor', 'thumbnail' ),
             'menu_icon'    => 'dashicons-hammer',
             'show_in_rest' => true,
+            'has_archive' => true
     ));
 });
