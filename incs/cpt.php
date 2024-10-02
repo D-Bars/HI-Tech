@@ -40,7 +40,7 @@ add_action( 'init', function () {
             'public'       => true,
             'supports'     => array( 'title', 'editor', 'thumbnail' ),
             'menu_icon'    => 'dashicons-format-gallery',
-            'show_in_rest' => false,
+            'show_in_rest' => true,
     ));
 
     register_post_type( 
@@ -83,6 +83,6 @@ add_action( 'init', function () {
             'public'       => true,
             'supports'     => array( 'title', 'editor', 'thumbnail' ),
             'menu_icon'    => 'dashicons-hammer',
-            'show_in_rest' => false,
+            'show_in_rest' => true,
     ));
 });
