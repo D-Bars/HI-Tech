@@ -614,8 +614,7 @@ footer{
     & .wpcf7-form{
         .box(100%);
         .flex__box(column);
-        gap: 1vw;
-
+        
         & .footer__form__input, .footer__form__textarea{
             .text(90%, 400, @color3);
             .box(90%, 2.5%);
@@ -624,11 +623,12 @@ footer{
             border: 1px solid;
             border-color: #FFF9;
             border-radius: 10px;
+            margin-top: 1vw;
         }
 
         & .footer__form__textarea{
             resize: vertical;
-            min-height: 5vw !important;
+            margin-top: 1vw;
         }
 
         & .footer__form__btn{
@@ -639,6 +639,7 @@ footer{
             background-color: fade(@color2, 60%);
             cursor: pointer;
             transition: .5s;
+            margin-top: 1vw;
 
             &:hover{
                 text-shadow: 10px 5px 6px @color3;
@@ -646,11 +647,51 @@ footer{
             }
         }
 
+        & .wpcf7-list-item-label{
+            .text(70%, 600, #FFF);
+        }
+
+        & .footer__form__agree{
+            display: none;
+        }
     }
 }
 
+.wpcf7-list-item{
+    margin-left: 0;
+}
+
+.wpcf7-form-control-wrap label{
+    .flex__box(row, center);
+    gap: 0.5vw;
+}
+
+
+.custom__checkbox {
+    appearance: none;
+    width: 3em;
+    height: 2em;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+}
+
+.custom__checkbox:checked {
+    background-color: #007bff;
+    border-color: rgba(0, 123, 255, 0.8);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+
+
 .footer__form__title{
     .text(140%, 800, @color3);
+}
+
+.wpcf7-response-output{
+    .text(100%, 600, #FFF);
 }
 
 /*============================= FOOTER ============================*/
