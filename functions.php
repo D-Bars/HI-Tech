@@ -19,7 +19,7 @@ add_action('after_setup_theme', function(){
     add_theme_support('title-tag');
 
     register_nav_menus( array(
-        'header-menu' => __('Header Menu', 'hi-tech'),
+        'header-footer-menu' => __('Header Menu', 'hi-tech'),
     ) );
 });
 

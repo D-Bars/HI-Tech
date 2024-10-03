@@ -49,7 +49,7 @@
                 <?php endif ?>
             </a></div>
             <?php wp_nav_menu(array(
-                'theme_location' => 'header-menu',
+                'theme_location' => 'header-footer-menu',
                 'container' => 'nav',
                 'container_class' => 'header__menu__wrapper',
                 'menu_class' => 'header__menu',

@@ -265,6 +265,8 @@ nav {
 
 /*BASIC*/
 
+/*============================= HEADER ============================*/
+
 header {
     position: relative;
     .box(100%, 0, 80dvh);
@@ -375,6 +377,10 @@ header {
         text-shadow: 10px 5px 6px @color3;
     }
 }
+
+/*============================= HEADER ============================*/
+
+/*============================= SERVICES__BLOCK/ARCHIVE__SERVICES ============================*/
 
 .services__block {
     .box(100%, 2.5%);
@@ -547,3 +553,104 @@ header {
         background-color: fade(@color2, 90%);
     }
 }
+
+/*============================= SERVICES__BLOCK/ARCHIVE__SERVICES ============================*/
+
+/*============================= FOOTER ============================*/
+
+footer{
+    position: relative;
+    .box(100%, 2.5%);
+    .flex__box(row, unset, space-between);
+    padding: 4vw 2.5%;
+    min-height: 30vw;
+}
+
+.footer__mask__img{
+    .img__mask(60%, #000);
+    z-index: 2;
+}
+
+.footer__wrapper__img{
+    .img_box(100%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.footer__menu__media__box{
+    .box(45%);
+    .flex__box(row);
+    gap: 25%;
+}
+
+.footer__menu, .footer__media__block{
+    .flex__box(column);
+    margin-left: 0;
+    position: relative;
+    gap: 1.5vw;
+    list-style: none;
+    z-index: 2;
+}
+
+.footer__media__block li {
+    .text(110%, 600, @color3);
+    transition: .1s;
+    
+    &:hover{
+        transform: scale(1.05);
+        text-shadow: 10px 5px 6px @color3;
+    }
+}
+
+.footer__form__wrapper{
+    position: relative;
+    .box(40%, 5%);
+    .flex__box(column);
+    gap: 1vw;
+    z-index: 2;
+
+    & .wpcf7-form{
+        .box(100%);
+        .flex__box(column);
+        gap: 1vw;
+
+        & .footer__form__input, .footer__form__textarea{
+            .text(90%, 400, @color3);
+            .box(90%, 2.5%);
+            padding: 0.5vw 2.5%;
+            background-color: fade(@color1, 20%);
+            border: 1px solid;
+            border-color: #FFF9;
+            border-radius: 10px;
+        }
+
+        & .footer__form__textarea{
+            resize: vertical;
+            min-height: 5vw !important;
+        }
+
+        & .footer__form__btn{
+            .text(90%, 800, @color3);
+            text-align: center;
+            padding: 0.7vw 2vw;
+            border-radius: 10px;
+            background-color: fade(@color2, 60%);
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover{
+                text-shadow: 10px 5px 6px @color3;
+                background-color: fade(@color2, 90%);
+            }
+        }
+
+    }
+}
+
+.footer__form__title{
+    .text(140%, 800, @color3);
+}
+
+/*============================= FOOTER ============================*/
