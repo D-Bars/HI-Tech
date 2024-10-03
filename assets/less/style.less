@@ -136,7 +136,7 @@ h2 {
     .text(160%, 800, @color1);
 }
 
-.h1__other__pages{
+.h1__other__pages {
     .text(150%, 800, @color1);
     text-align: center;
     width: 100%;
@@ -147,16 +147,18 @@ h2 {
 /*keyframes*/
 @keyframes ArrowReadMore {
     0% {
-      opacity: 0.5;
+        opacity: 0.5;
     }
+
     25% {
-      opacity: 0.75;
+        opacity: 0.75;
     }
+
     100% {
-      opacity: 1;
-      padding-left: 0.8vw;
+        opacity: 1;
+        padding-left: 0.8vw;
     }
-  }
+}
 
 /*keyframes*/
 
@@ -389,12 +391,12 @@ header {
     background-color: #FFF;
 }
 
-.services__box{
+.services__box {
     .box(100%);
     .flex__box(row, center, space-between)
 }
 
-.services__title__subtitle__box{
+.services__title__subtitle__box {
     .box(40%);
     .flex__box(column);
     gap: 1vw
@@ -405,14 +407,14 @@ header {
     .text(90%, 600, @fontColor);
 }
 
-.all__services__link{
+.all__services__link {
     .text(130%, 800, @color1);
     background-color: fade(@color2, 60%);
     border-radius: 10px;
     padding: 0.5vw 1vw;
     transition: .5s;
 
-    &:hover{
+    &:hover {
         color: #FFF;
         text-shadow: 10px 5px 6px @color1;
         background-color: fade(@color2, 90%);
@@ -430,7 +432,8 @@ header {
     display: none;
 }
 
-.services__items__box .services__item:nth-child(-n+3), .archive__services__item {
+.services__items__box .services__item:nth-child(-n+3),
+.archive__services__item {
     .flex__box(column);
     width: calc(100% / 3);
     box-sizing: border-box;
@@ -440,40 +443,43 @@ header {
     flex-basis: auto;
 }
 
-.services__item__wrapper__img, .archive__services__item__wrapper__img {
+.services__item__wrapper__img,
+.archive__services__item__wrapper__img {
     .img_box(100%, 35vh);
-    
+
     & img {
         border-radius: 10px;
     }
 }
 
-.services__item__title, .archive__services__item__title {
+.services__item__title,
+.archive__services__item__title {
     .text(130%, 800, @color1);
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
     transition: .4s;
 
-    &:hover{
+    &:hover {
         color: @color2;
     }
 }
 
-.services__item__description, .archive__services__item__description {
+.services__item__description,
+.archive__services__item__description {
     .text(90%, 600, @fontColor);
 }
 
-.services__item__read__more__box{
+.services__item__read__more__box {
     .box(35%);
     .flex__box(row, center);
     gap: 0.5vw;
 
-    &:hover .services__item__arrow{
+    &:hover .services__item__arrow {
         animation: ArrowReadMore .7s ease forwards;
     }
 
-    &:hover .services__item__read__more{
+    &:hover .services__item__read__more {
         text-shadow: 0px 0px 2px @color1;
         border-color: @color2;
     }
@@ -487,13 +493,13 @@ header {
     transition: 0.5s;
 }
 
-.services__item__arrow{
+.services__item__arrow {
     .img_box(1.3vw);
     padding-top: 0.2vw;
     opacity: 0;
 }
 
-.archive__services__block{
+.archive__services__block {
     .box(100%, 2.5%);
     .flex__box(row, flex-start);
     padding: 3vw 2.5%;
@@ -502,40 +508,40 @@ header {
     background-color: #FFF;
 }
 
-.archive__services__item{
+.archive__services__item {
     .box(31.5%);
 }
 
-.single__service__item{
+.single__service__item {
     .box(100%, 2.5%);
     .flex__box(row);
-    margin-top: 3vw;
+    padding: 4vw 2.5%;
     gap: 5%;
 }
 
-.single__service__item__wrapper__img{
+.single__service__item__wrapper__img {
     .img_box(45%);
     align-items: stretch;
 }
 
-.single__service__item__content__box{
+.single__service__item__content__box {
     .box(50%);
     .flex__box(column);
     position: relative;
     gap: 3vw;
 }
 
-.single__service__item__title{
+.single__service__item__title {
     .text(200%, 800, @color1);
     text-align: center;
 }
 
-.single__service__item__description{
+.single__service__item__description {
     .text(130%, 600, @color1);
     padding-bottom: 5vw;
 }
 
-.order__service{
+.order__service {
     .box(35%, 2.5%);
     .text(110%, 600, @color1);
     position: absolute;
@@ -547,7 +553,7 @@ header {
     padding: 1vw 2.5%;
     transition: .5s;
 
-    &:hover{
+    &:hover {
         color: #FFF;
         text-shadow: 10px 5px 6px @color1;
         background-color: fade(@color2, 90%);
@@ -558,7 +564,7 @@ header {
 
 /*============================= FOOTER ============================*/
 
-footer{
+footer {
     position: relative;
     .box(100%, 2.5%);
     .flex__box(row, unset, space-between);
@@ -566,12 +572,12 @@ footer{
     min-height: 30vw;
 }
 
-.footer__mask__img{
+.footer__mask__img {
     .img__mask(60%, #000);
     z-index: 2;
 }
 
-.footer__wrapper__img{
+.footer__wrapper__img {
     .img_box(100%, 100%);
     position: absolute;
     top: 0;
@@ -579,13 +585,14 @@ footer{
     z-index: 1;
 }
 
-.footer__menu__media__box{
+.footer__menu__media__box {
     .box(45%);
     .flex__box(row);
     gap: 25%;
 }
 
-.footer__menu, .footer__media__block{
+.footer__menu,
+.footer__media__block {
     .flex__box(column);
     margin-left: 0;
     position: relative;
@@ -597,101 +604,146 @@ footer{
 .footer__media__block li {
     .text(110%, 600, @color3);
     transition: .1s;
-    
-    &:hover{
+
+    &:hover {
         transform: scale(1.05);
         text-shadow: 10px 5px 6px @color3;
     }
 }
 
-.footer__form__wrapper{
+.footer__form__wrapper {
     position: relative;
     .box(40%, 5%);
     .flex__box(column);
     gap: 1vw;
     z-index: 2;
 
-    & .wpcf7-form{
+    & .wpforms-field-container {
         .box(100%);
         .flex__box(column);
-        
-        & .footer__form__input, .footer__form__textarea{
+
+        & .footer__form__input {
+            .box(100%);
+        }
+
+        & .footer__form__input input,
+        .footer__form__textarea textarea {
             .text(90%, 400, @color3);
-            .box(90%, 2.5%);
+            .box(100%, 2.5%);
             padding: 0.5vw 2.5%;
             background-color: fade(@color1, 20%);
             border: 1px solid;
             border-color: #FFF9;
             border-radius: 10px;
-            margin-top: 1vw;
         }
 
-        & .footer__form__textarea{
+        & .footer__form__textarea {
             resize: vertical;
-            margin-top: 1vw;
         }
 
-        & .footer__form__btn{
-            .text(90%, 800, @color3);
-            text-align: center;
-            padding: 0.7vw 2vw;
-            border-radius: 10px;
-            background-color: fade(@color2, 60%);
-            cursor: pointer;
-            transition: .5s;
-            margin-top: 1vw;
-
-            &:hover{
-                text-shadow: 10px 5px 6px @color3;
-                background-color: fade(@color2, 90%);
-            }
+        & input::placeholder,
+        textarea::placeholder {
+            color: #FFF !important;
         }
 
-        & .wpcf7-list-item-label{
-            .text(70%, 600, #FFF);
+        & input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            color: #FFF !important;
         }
 
-        & .footer__form__agree{
-            display: none;
+        & input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            color: #FFF !important;
+        }
+
+        & input::-ms-input-placeholder,
+        textarea::-ms-input-placeholder {
+            color: #FFF !important;
+        }
+
+        & input::-ms-input-placeholder,
+        textarea::-ms-input-placeholder {
+            color: #FFF !important;
+        }
+
+        & input:focus, textarea:focus{
+            color: #FFF !important;
         }
     }
 }
 
-.wpcf7-list-item{
-    margin-left: 0;
+.wpforms-submit-container {
+    & .wpforms-submit {
+        .text(90%, 800, @color3) !important;
+        text-align: center !important;
+        padding: 0 2vw !important;
+        border-radius: 10px !important;
+        background-color: fade(@color2, 60%) !important;
+        cursor: pointer !important;
+        transition: .5s !important;
+        margin-top: 1vw !important;
+
+        &:hover {
+            text-shadow: 10px 5px 6px @color3;
+            background-color: fade(@color2, 90%);
+        }
+    }
 }
 
-.wpcf7-form-control-wrap label{
-    .flex__box(row, center);
-    gap: 0.5vw;
+#wpforms-69-field_5_1 {
+    appearance: none !important;
+    width: 3em !important;
+    height: 2em !important;
+    border: 1px solid #adb5bd !important;
+    border-radius: 0.25em !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 60% !important;
 }
 
-
-.custom__checkbox {
-    appearance: none;
-    width: 3em;
-    height: 2em;
-    border: 1px solid #adb5bd;
-    border-radius: 0.25em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 60%;
+#wpforms-69-field_5_1:checked {
+    background-color: #007bff !important;
+    border-color: rgba(0, 123, 255, 0.8) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e") !important;
 }
 
-.custom__checkbox:checked {
-    background-color: #007bff;
-    border-color: rgba(0, 123, 255, 0.8);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+.custom__checkbox{
+    position: relative;
+    padding: 0;
+
+    &:hover .wpforms-field-description{
+        display: flex;
+    }
 }
 
+.choice-1{
+    .box(90%);
 
+    & input[type=checkbox]:before{
+        opacity: 0;
+    }
+}
 
-.footer__form__title{
+.wpforms-field-description{
+    position: absolute !important;
+    line-height: 1.2 !important;
+    width: 96% !important;
+    padding: 1vh 2% !important;
+    background-color: #FFF9 !important;
+    color: #000 !important;
+    font-size: .8vw !important;
+    margin-top: 1vh !important;
+    left: 0 !important;
+    display: none;
+    z-index: 2 !important;
+}
+
+.footer__form__title {
     .text(140%, 800, @color3);
 }
 
-.wpcf7-response-output{
-    .text(100%, 600, #FFF);
+.wpforms-field-label-inline {
+    .text(70%, 600, #FFF) !important;
 }
 
 /*============================= FOOTER ============================*/

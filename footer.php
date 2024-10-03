@@ -18,7 +18,7 @@
     </div>
     <div class="footer__form__wrapper">
         <div class="footer__form__title"><?php _e('Send Us A Note','hi-tech') ?></div>
-        <?php echo do_shortcode('[contact-form-7 id="a2e8553" title="Footer_form"]'); ?>
+        <?php echo do_shortcode('[wpforms id="69" title="false"]'); ?>
     </div>
 </footer>
 <?php wp_footer(); ?>
