@@ -747,3 +747,43 @@ footer {
 }
 
 /*============================= FOOTER ============================*/
+
+/*============================= THX ============================*/
+
+.thx__block{
+    .box(100%);
+    .flex__box(column, center);
+    background-color: #0001;
+    gap: 2vw;
+    min-height: 100vh;
+}
+
+.thx__status{
+    .text(120%, 800, green);
+    padding: 0.3vw 2vw;
+}
+
+.thx__message{
+    .text(100%, 600, @color1);
+}
+
+.wrapper__thx__img{
+    .img_box(5vw);
+}
+
+.back__btn{
+    .text(90%, 800, @color1);
+    padding: 0.5vw 1vw;
+    background-color: fade(@color2, 60%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover{
+        color: @color3;
+        text-shadow: 10px 5px 6px @color1;
+        background-color: fade(@color2, 90%);
+    }
+}
+
+/*============================= THX ============================*/
