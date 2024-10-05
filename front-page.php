@@ -45,4 +45,11 @@ $services_count = count($services);
         </div>
     </div>
 <?php endif; ?>
+
+<div class="brends__block">
+    <div class="brend__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/discord.png" alt="BrandImg"></div>
+    <div class="brend__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/netflix.png" alt="BrandImg"></div>
+    <div class="brend__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/broadcom.png" alt="BrandImg"></div>
+    <div class="brend__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/airbnb.png" alt="BrandImg"></div>
+</div>
 <?php get_footer(); ?>
