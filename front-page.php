@@ -1,5 +1,38 @@
 <?php get_header(); ?>
 
+<div class="advantages__block">
+  <div class="advantages__item">
+    <div class="advantages__wrapper__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages1.jpg" alt="advantages1"></div>
+    <div class="advantages__title"><?php _e('Art Of Coding', 'hi-tech') ?></div>
+    <div class="advantages__description"><?php _e('Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo, numquam velit sunt, obcaecati recusandae corporis dolor quod dolore iusto nihil, quidem magnam quas iure perspiciatis eveniet, veniam reiciendis nisi.', 'hi-tech') ?></div>
+  </div>
+  <div class="advantages__item">
+    <div class="advantages__wrapper__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages2.jpg" alt="advantages1"></div>
+    <div class="advantages__title"><?php _e('Responsive Design', 'hi-tech') ?></div>
+    <div class="advantages__description"><?php _e('Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo, numquam velit sunt, obcaecati recusandae corporis dolor quod dolore iusto nihil, quidem magnam quas iure perspiciatis eveniet, veniam reiciendis nisi.', 'hi-tech') ?></div>
+  </div>
+  <div class="advantages__item">
+    <div class="advantages__wrapper__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages3.jpg" alt="advantages1"></div>
+    <div class="advantages__title"><?php _e('Feature Rich', 'hi-tech') ?></div>
+    <div class="advantages__description"><?php _e('Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo, numquam velit sunt, obcaecati recusandae corporis dolor quod dolore iusto nihil, quidem magnam quas iure perspiciatis eveniet, veniam reiciendis nisi.', 'hi-tech') ?></div>
+  </div>
+  <div class="advantages__item">
+    <div class="advantages__wrapper__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages4.jpg" alt="advantages1"></div>
+    <div class="advantages__title"><?php _e('Useful Documentation', 'hi-tech') ?></div>
+    <div class="advantages__description"><?php _e('Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo, numquam velit sunt, obcaecati recusandae corporis dolor quod dolore iusto nihil, quidem magnam quas iure perspiciatis eveniet, veniam reiciendis nisi.', 'hi-tech') ?></div>
+  </div>
+  <div class="advantages__item">
+    <div class="advantages__wrapper__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages5.jpg" alt="advantages1"></div>
+    <div class="advantages__title"><?php _e('Fast Delivery', 'hi-tech') ?></div>
+    <div class="advantages__description"><?php _e('Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo, numquam velit sunt, obcaecati recusandae corporis dolor quod dolore iusto nihil, quidem magnam quas iure perspiciatis eveniet, veniam reiciendis nisi.', 'hi-tech') ?></div>
+  </div>
+  <div class="advantages__item">
+    <div class="advantages__wrapper__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/advantages6.jpg" alt="advantages1"></div>
+    <div class="advantages__title"><?php _e('Free Plugins', 'hi-tech') ?></div>
+    <div class="advantages__description"><?php _e('Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo, numquam velit sunt, obcaecati recusandae corporis dolor quod dolore iusto nihil, quidem magnam quas iure perspiciatis eveniet, veniam reiciendis nisi.', 'hi-tech') ?></div>
+  </div>
+</div>
+
 <?php
 global $post;
 $services = get_posts(array(
