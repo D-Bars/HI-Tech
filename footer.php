@@ -10,7 +10,9 @@
             'walker' => new Theme_Header_Menu(),
         )); ?>
         <ul class="footer__media__block">
-            <li><a href="">Twitter</a></li>
+            <?php //if($theme__options['twitter']) : ?>
+            <li><a href="<?php //echo $theme__options['twitter']; ?>">Twitter<?php wp_dump($theme__options); ?></a></li>
+            <?php //endif; ?>
             <li><a href="">Facebook</a></li>
             <li><a href="">Instagram</a></li>
             <li><a href="">Youtube</a></li>

@@ -47,9 +47,9 @@ $services_count = count($services);
         <div class="services__box">
             <div class="services__title__subtitle__box">
                 <h2 class="services__title"><?php _e('Services', 'hi-tech') ?></h2>
-                <div class="services__subtitle"><?php _e('Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro sunt deleniti
-            consectetur cupiditate veritatis magni est omnis amet esse explicabo aliquam adipisci impedit unde dolores sed
-            nulla, obcaecati nobis.', 'hi-tech') ?></div>
+                <?php if($theme__options['services_description']): ?>
+                 <div class="services__subtitle"><?php echo esc_html($theme__options['services_description']); ?></div> 
+            <?php endif; ?>
             </div>
             <?php if ($services_count > 3): ?>
                 <div class="all__services__link"><a href="<?php echo get_post_type_archive_link('services'); ?>"><?php _e('All services', 'hi-tech'); ?></a></div>
