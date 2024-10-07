@@ -1,3 +1,6 @@
+<?php 
+global $theme__options;
+?>
 <footer>
     <div class="footer__wrapper__img"><div class="footer__mask__img"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer_img.jpg"
             alt="FooterImg"></div>
@@ -10,12 +13,15 @@
             'walker' => new Theme_Header_Menu(),
         )); ?>
         <ul class="footer__media__block">
-            <?php //if($theme__options['twitter']) : ?>
-            <li><a href="<?php //echo $theme__options['twitter']; ?>">Twitter<?php wp_dump($theme__options); ?></a></li>
-            <?php //endif; ?>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Youtube</a></li>
+            <li>
+            <?php echo !empty($theme__options['twitter']) ? '<a href="' . esc_url($theme__options['twitter']) . '">Twitter</a>' : ''; ?>
+            </li>
+            <li>
+                <?php echo !empty($theme__options['facebook']) ? '<a href="' . esc_url($theme__options['facebook']) . '">Facebook</a>' : ''; ?></li>
+            <li>
+                <?php echo !empty($theme__options['instagram']) ? '<a href="' . esc_url($theme__options['instagram']) . '">Instagram</a>' : ''; ?></li>
+            <li>
+                <?php echo !empty($theme__options['youtube']) ? '<a href="' . esc_url($theme__options['youtube']) . '">Youtube</a>' : ''; ?></li>
         </ul>
     </div>
     <div class="footer__form__wrapper">
