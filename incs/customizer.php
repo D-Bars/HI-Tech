@@ -10,7 +10,8 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     $wp_customize->add_setting('hi-tech_service');
     $wp_customize->add_control('hi-tech_service', array(
         'label' => __('Services Description', 'hi-tech'),
-        'section' => 'hi-tech__theme__options'
+        'section' => 'hi-tech__theme__options',
+        'type' => 'textarea'
     ));
 
     //SOCIAL MEDIA
