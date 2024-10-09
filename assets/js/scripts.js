@@ -22,11 +22,8 @@ class Slider {
     sliderGo(positionNum, itemNum) {
         this.slideBlocker = true;
         this.sliderLine.animate({ 'left': '-' + (positionNum * this.sliderItemWidth) }, 1000, () => {
-            console.log('after: ' + this.slideBlocker);
             this.pointer = itemNum;
             this.setActiveDot();
-            console.log('pointer:' + this.pointer);
-            console.log('position:' + positionNum);
             this.slideBlocker = false;
         });
     }
@@ -74,6 +71,112 @@ class Slider {
     }
 }
 
+
+
 jQuery(document).ready(function ($) {
+    class PhotoGallery{
+        constructor(objId){
+          this.objBody = $('#' + objId);
+          this.sliderMask = this.objBody.find('.photo__gallery__mask__box');
+          this.scrollLine = this.objBody.find('.photo__gallery__mask__scroll__line__box');
+          this.quantitySlide = this.objBody.find('.photo__gallery__quantity__box');
+          this.addClick();
+          this.addClose();
+          $(window).on('mousewheel', (event) => {
+            this.scrollGallery(event);
+          });
+          this.windowAddClick();
+        }
+      
+        windowAddClick(){
+          this.scrollLine.find('.photo__gallery__main__wrapper__img').on('click', (event) => {
+            this.openPhoto($(event.delegateTarget));
+          });
+        }
+      
+        addClick(){
+          this.objBody.find('.photo__gallery__main__box').find('.photo__gallery__main__wrapper__img').on('click', (event) => {
+            this.openWindow(event.delegateTarget);
+          });
+        }
+      
+        addClose(){
+          this.sliderMask.find('.photo__gallery__closer__wrapper').on('click', () => {
+            this.closeMask();
+          })
+        }
+      
+        closeMask(){
+          this.sliderMask.animate({'left': '-100vw'}, 1000);
+          $('BODY').css('overflow-y', 'auto');
+          this.block = true;
+        }
+        
+        openWindow(el){
+          this.sliderMask.animate({'left': 0}, 1000);
+          this.findPhoto(el);
+          $('BODY').css('overflow-y', 'hidden');
+          this.block = false;
+        }
+      
+        scrollGallery(event){
+          if(this.block == false){
+            if (event.originalEvent.deltaY > 0) {
+              var newPhoto = this.actuall.next();
+            }else{
+              var newPhoto = this.actuall.prev();
+            }
+            if(newPhoto.is('.photo__gallery__main__wrapper__img')){
+              this.openPhoto(newPhoto);
+            }
+          }
+        }
+        
+        openPhoto(obj){
+          this.pointer = $(obj).attr('img_pointer');
+          this.actuall = obj;
+          let src = obj.find('img').attr('src');
+          $('.photo__gallery__active').removeClass('photo__gallery__active');
+          obj.addClass('photo__gallery__active');
+          this.sliderMask.find('.photo__gallery__last').find('img').attr('src', src);
+          this.scrollThisLine();
+          this.setQuant();
+        }
+        
+        
+        findPhoto(obj){
+          this.pointer = $(obj).attr('img_pointer');
+          let actuall = this.scrollLine.find('[img_pointer="' + this.pointer + '"]');
+          if(actuall.is('.photo__gallery__main__wrapper__img')){
+            this.openPhoto(actuall);
+          }
+        }
+      
+        setQuant(){
+          this.quantitySlide.find('.photo__gallery__actuall__img').html(this.pointer);
+        }
+      
+        scrollThisLine(){
+          let itemPos = this.actuall.position();
+          let topPos = itemPos.top;
+          let position = (topPos - (($('.photo__gallery__mask__scroll__line__block').outerHeight() / 2) - (this.actuall.outerHeight() / 2)));
+        
+        if(position > 0){
+          position = '-' + position;
+        }
+        else{
+          position = (($('.photo__gallery__mask__scroll__line__block').outerHeight() / 2) - (this.actuall.outerHeight() / 2)) - topPos;
+        }
+        
+        if(topPos <= 0){
+          position = ($('.photo__gallery__mask__scroll__line__block').outerHeight() / 2) - (this.actuall.outerHeight());
+        }
+        
+          this.scrollLine.animate({'top':  position}, 100);
+      
+        }
+      }
+
     dotSlider = new Slider('SliderDot', true);
+    photoGallery = new PhotoGallery('gallery1');
 });

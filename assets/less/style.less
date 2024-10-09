@@ -108,9 +108,9 @@
     width: 2vw;
     height: 2vw;
     position: absolute;
-    right: 0.5vw;
+    left: 0.5vw;
     top: 0.5vw;
-    background: url(img/close.png), @color3;
+    background: url(../img/close.png), @color3;
     background-size: 70% 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -841,7 +841,7 @@ footer {
 
 /*============================= ADVANTAGES__BLOCK ============================*/
 
-/*============================= ADVANTAGES__BLOCK ============================*/
+/*============================= OUR__CLIENTS__BLOCK ============================*/
 
 .our__clients__block{
     .box(100%);
@@ -865,4 +865,155 @@ footer {
     .img_box(50%);
 }
 
-/*============================= ADVANTAGES__BLOCK ============================*/
+/*============================= OUR__CLIENTS__BLOCK ============================*/
+
+/*============================= PHOTO__GALLERY__BLOCK ============================*/
+
+.photo__gallery__main__block{
+    .box(100%, 2.5%);
+    margin-top: 2vw;
+  }
+  
+  .photo__gallery__main__box{
+    .box(100%);
+    margin-top: 3vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16vw, 1fr));
+    grid-gap: 1vw 1vw;
+    padding-bottom: 3vw;
+  }
+  
+  .photo__gallery__main__wrapper__img{
+    width: auto;
+    position: relative;
+    height: 17vw;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+  
+    &:hover{
+      transform: scale(1.1, 1.3);
+      z-index: 2;
+    }
+  
+    & img{
+      width: 100%;
+      min-height: 17vw;
+      object-fit: contain; 
+    }
+  }
+  
+  .photo__gallery__mask__block{
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #0008;
+  }
+  
+  .photo__gallery__mask__box{
+    .box(100%);
+    .flex__box(row);
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    height: 100vh;
+    z-index: 999;
+    background-color: #0008;
+  }
+  
+  .photo__gallery__mask__main{
+    .box(85%);
+    .flex__box(row, center, center);
+    position: relative;
+    padding-bottom: 7.5vh;
+    padding-top: 7.5vh;
+    min-height: 85vh;
+  }
+  
+  .photo__gallery__mask__wrapper__img{
+    .img_box(auto, auto);
+    
+    
+    & img{
+      max-height: 85vh;
+      max-width: 83vw;
+    }
+  }
+  
+  .photo__gallery__last{
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .photo__gallery__mask__scroll__line__block{
+    .box(15%);
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .photo__gallery__mask__scroll__line__box{
+    .box(100%, 4%);
+    .flex__box(column, flex-end, center);
+    position: relative;
+    height: auto;
+    
+    & .photo__gallery__main__wrapper__img{
+      height: auto;
+      width: 90%;
+  
+      &:hover{
+        transform: unset;
+        z-index: 1;
+      }
+  
+      & img{
+        min-height: unset;
+      }
+    }
+  }
+  
+  .photo__gallery__quantity__block{
+    position: absolute;
+    bottom: 2vw;
+    left: 4vw;
+  
+    & .photo__gallery__quantity__box{
+      .box(100%);
+      .flex__box(row, flex-end);
+      .text(200%, 400, #FFF);
+      height: auto;
+      gap: 1vw;
+  
+      & *{
+        height: 1em;
+      }
+    }
+  
+    & .photo__gallery__actuall__img{
+      .flex__box(row, flex-end);
+      .text(350%, 600, #FFF);
+      line-height: 65%;
+    }
+  }
+  
+  .photo__gallery__closer__wrapper{
+    .closer__btn();
+    z-index: 2;
+  }
+  
+  .photo__gallery__active{
+    position: relative;
+    right: 1.8vw;
+    transform: scale(1.3, 1.1);
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  
+    &:hover{
+      transform: scale(1.3, 1.1)!important;
+    }
+  }
+
+/*============================= PHOTO__GALLERY__BLOCK ============================*/
