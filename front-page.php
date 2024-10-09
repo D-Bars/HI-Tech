@@ -85,4 +85,12 @@ $services_count = count($services);
     <div class="brend__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/broadcom.png" alt="BrandImg"></div>
     <div class="brend__item__wrapper"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/airbnb.png" alt="BrandImg"></div>
 </div>
+
+<div class="our__clients__block">
+  <div class="our__clients__content">
+    <h2 class="our__clients__title"><?php _e('Our Clients', 'hi-tech') ?></h2>
+    <div class="our__clients__description"><?php _e('Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus recusandae et suscipit fuga repellendus facere optio amet tempore. Velit reiciendis possimus harum nesciunt exercitationem corporis obcaecati ipsa, iure minus illum.','hi-tech'); ?></div>
+  </div>
+  <div class="our__clients__wrapper__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/our_clients.jpg" alt="OurClients"></div>
+</div>
 <?php get_footer(); ?>
