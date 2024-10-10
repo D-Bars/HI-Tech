@@ -800,8 +800,14 @@ footer {
 
 .brend__item__wrapper {
     .img_box(15%);
+    display: flex;
     filter: grayscale(100%);
+    min-height: 8vw;
     transition: 0.5s;
+
+    & img{
+        align-self: center;
+    }
 
     &:hover {
         filter: grayscale(0%);
