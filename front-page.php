@@ -122,7 +122,7 @@ $services_count = count($services);
 <?php
 global $post;
 $photo_gallery = get_posts(array(
-  'post_type' => 'photo gallery',
+  'post_type' => 'photo-gallery',
   'numberposts' => -1
 ));
 $count__photos__gallery = count($photo_gallery);
@@ -138,7 +138,7 @@ $limited__photos = 8;
         <?php endif; ?>
       </div>
       <?php if($count__photos__gallery > $limited__photos): ?>
-        <div><a class="photo__gallery__link" href="<?php //echo get_post_type_archive_link('photo-gallery'); ?>"> <?php _e('All Photos', 'hi-tech'); ?></a></div>
+        <div><a class="photo__gallery__link" href="<?php echo get_post_type_archive_link('photo-gallery'); ?>"> <?php _e('All Photos', 'hi-tech'); ?></a></div>
       <?php endif; ?>
     </div>
     <div class="photo__gallery__main__box">
@@ -156,7 +156,7 @@ $limited__photos = 8;
       </div>
       <div class="photo__gallery__mask__scroll__line__block">
         <div class="photo__gallery__mask__scroll__line__box">
-          <?php $i = 1; foreach ($photo_gallery as $post):
+          <?php $i = 1; foreach (array_slice($photo_gallery, 0, $limited__photos) as $post):
             setup_postdata($post);
             ?>
             <div class="photo__gallery__main__wrapper__img" img_pointer="<?php echo $i; ?>"><img src="<?php the_post_thumbnail_url('full'); ?>" alt="FullWidth<?php the_title(); ?>"></div>
@@ -167,7 +167,7 @@ $limited__photos = 8;
         <div class="photo__gallery__quantity__box">
           <div class="photo__gallery__actuall__img"></div>
           <span>/</span>
-          <div class="photo__gallery__all__img"><?php echo ($count__photos__gallery > $limited__photos) ? $limited__photos : $count__photos__gallery; ?></div>
+          <div class="photo__gallery__all__img"><?php echo ($count__photos__gallery >= $limited__photos) ? $limited__photos : $count__photos__gallery; ?></div>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 
 <?php if (have_posts()): ?>
     <div class="archive__services__block">
-        <h1 class="h1__other__pages"><?php _e('All Services', 'hi-tech'); ?></h1>
+        <h1 class="h1__archive__pages"><?php _e('All Services', 'hi-tech'); ?></h1>
         <?php while (have_posts()):
             the_post(); ?>
             <div class="archive__services__item">

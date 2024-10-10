@@ -88,7 +88,7 @@ add_action( 'init', function () {
     ));
 
     register_post_type( 
-        'photo gallery',
+        'photo-gallery',
          array(
             'labels' => array(
                 'name'                     => '1Фотографии', // основное название во множественном числе
