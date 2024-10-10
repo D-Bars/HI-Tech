@@ -666,7 +666,8 @@ footer {
             color: #FFF !important;
         }
 
-        & input:focus, textarea:focus{
+        & input:focus,
+        textarea:focus {
             color: #FFF !important;
         }
     }
@@ -707,24 +708,24 @@ footer {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e") !important;
 }
 
-.custom__checkbox{
+.custom__checkbox {
     position: relative;
     padding: 0;
 
-    &:hover .wpforms-field-description{
+    &:hover .wpforms-field-description {
         display: flex;
     }
 }
 
-.choice-1{
+.choice-1 {
     .box(90%);
 
-    & input[type=checkbox]:before{
+    & input[type=checkbox]:before {
         opacity: 0;
     }
 }
 
-.wpforms-field-description{
+.wpforms-field-description {
     position: absolute !important;
     line-height: 1.2 !important;
     width: 96% !important;
@@ -750,7 +751,7 @@ footer {
 
 /*============================= THX ============================*/
 
-.thx__block{
+.thx__block {
     .box(100%);
     .flex__box(column, center);
     background-color: #0001;
@@ -758,20 +759,20 @@ footer {
     min-height: 100vh;
 }
 
-.thx__status{
+.thx__status {
     .text(120%, 800, green);
     padding: 0.3vw 2vw;
 }
 
-.thx__message{
+.thx__message {
     .text(100%, 600, @color1);
 }
 
-.wrapper__thx__img{
+.wrapper__thx__img {
     .img_box(5vw);
 }
 
-.back__btn{
+.back__btn {
     .text(90%, 800, @color1);
     padding: 0.5vw 1vw;
     background-color: fade(@color2, 60%);
@@ -779,7 +780,7 @@ footer {
     cursor: pointer;
     transition: .5s;
 
-    &:hover{
+    &:hover {
         color: @color3;
         text-shadow: 10px 5px 6px @color1;
         background-color: fade(@color2, 90%);
@@ -791,18 +792,18 @@ footer {
 
 /*============================= BRANDS__BLOCK ============================*/
 
-.brends__block{
+.brends__block {
     .box(100%, 2.5%);
     .flex__box(row, center, space-between);
     padding: 3vw 2.5%;
 }
 
-.brend__item__wrapper{
+.brend__item__wrapper {
     .img_box(15%);
     filter: grayscale(100%);
     transition: 0.5s;
 
-    &:hover{
+    &:hover {
         filter: grayscale(0%);
     }
 }
@@ -811,7 +812,7 @@ footer {
 
 /*============================= ADVANTAGES__BLOCK ============================*/
 
-.advantages__block{
+.advantages__block {
     .box(100%, 2.5%);
     .flex__box(row, center);
     flex-wrap: wrap;
@@ -819,7 +820,7 @@ footer {
     padding: 4vw 2.5%;
 }
 
-.advantages__item{
+.advantages__item {
     .box(32%, 3%);
     .flex__box(column);
     gap: 1vw;
@@ -827,15 +828,15 @@ footer {
     background-color: #FFF;
 }
 
-.advantages__wrapper__img{
+.advantages__wrapper__img {
     .img_box(5vw);
 }
 
-.advantages__title{
-    .text(115%, 800, @color1);  
+.advantages__title {
+    .text(115%, 800, @color1);
 }
 
-.advantages__description{
+.advantages__description {
     .text(100%, 400, @fontColor);
 }
 
@@ -843,25 +844,25 @@ footer {
 
 /*============================= OUR__CLIENTS__BLOCK ============================*/
 
-.our__clients__block{
+.our__clients__block {
     .box(100%);
     .flex__box(row, stretch);
     margin-top: 3vw;
 }
 
-.our__clients__content{
+.our__clients__content {
     .box(50%, 2.5%);
     .flex__box(column, flex-start, center);
-    
+
     background-color: #FFF;
     gap: 2vw;
 }
 
-.our__clients__description{
+.our__clients__description {
     .text(100%, 600, @fontColor);
 }
 
-.our__clients__wrapper__img{
+.our__clients__wrapper__img {
     .img_box(50%);
 }
 
@@ -869,41 +870,70 @@ footer {
 
 /*============================= PHOTO__GALLERY__BLOCK ============================*/
 
-.photo__gallery__main__block{
+.photo__gallery__main__block {
     .box(100%, 2.5%);
     margin-top: 2vw;
-  }
-  
-  .photo__gallery__main__box{
+}
+
+.photo__gallery__title__btn__box{
+    .box(100%);
+    .flex__box(row, center, space-between);
+}
+
+.photo__gallery__description{
+    .text(100%, 600, @fontColor);
+}
+
+.photo__gallery__link{
+    .text(130%, 800, @color1);
+    background-color: fade(@color2, 60%);
+    border-radius: 10px;
+    padding: 0.5vw 1vw;
+    transition: .5s;
+
+    &:hover {
+        color: #FFF;
+        text-shadow: 10px 5px 6px @color1;
+        background-color: fade(@color2, 90%);
+    }
+}
+
+.photo__gallery__title__description__box{
+    .box(45%);
+    .flex__box(column);
+    gap: 1vw;
+}
+
+.photo__gallery__main__box {
     .box(100%);
     margin-top: 3vw;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
     grid-gap: 1vw 1vw;
     padding-bottom: 3vw;
-  }
-  
-  .photo__gallery__main__wrapper__img{
+}
+
+.photo__gallery__main__wrapper__img {
     width: auto;
     position: relative;
     height: 17vw;
     overflow: hidden;
     cursor: pointer;
     transition: .3s;
-  
-    &:hover{
-      transform: scale(1.1, 1.1);
-      z-index: 2;
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+        z-index: 2;
     }
-  
-    & img{
-      width: 100%;
-      min-height: 17vw;
-      object-fit: cover; 
+
+    & img {
+        width: 100%;
+        min-height: 17vw;
+        object-fit: cover;
     }
-  }
-  
-  .photo__gallery__mask__block{
+}
+
+.photo__gallery__mask__block {
     position: fixed;
     right: -100vw;
     top: 0;
@@ -911,9 +941,9 @@ footer {
     height: 100vh;
     z-index: 999;
     background-color: #0008;
-  }
-  
-  .photo__gallery__mask__box{
+}
+
+.photo__gallery__mask__box {
     .box(100%);
     .flex__box(row);
     position: fixed;
@@ -922,98 +952,98 @@ footer {
     height: 100vh;
     z-index: 999;
     background-color: #0008;
-  }
-  
-  .photo__gallery__mask__main{
+}
+
+.photo__gallery__mask__main {
     .box(85%);
     .flex__box(row, center, center);
     position: relative;
     padding-bottom: 7.5vh;
     padding-top: 7.5vh;
     min-height: 85vh;
-  }
-  
-  .photo__gallery__mask__wrapper__img{
+}
+
+.photo__gallery__mask__wrapper__img {
     .img_box(auto, auto);
-    
-    
-    & img{
-      max-height: 85vh;
-      max-width: 83vw;
+
+
+    & img {
+        max-height: 85vh;
+        max-width: 83vw;
     }
-  }
-  
-  .photo__gallery__last{
+}
+
+.photo__gallery__last {
     position: absolute;
     z-index: 2;
-  }
-  
-  .photo__gallery__mask__scroll__line__block{
+}
+
+.photo__gallery__mask__scroll__line__block {
     .box(15%);
     height: 100vh;
     overflow: hidden;
-  }
-  
-  .photo__gallery__mask__scroll__line__box{
+}
+
+.photo__gallery__mask__scroll__line__box {
     .box(100%, 4%);
     .flex__box(column, flex-end, center);
     position: relative;
     height: auto;
-    
-    & .photo__gallery__main__wrapper__img{
-      height: auto;
-      width: 90%;
-  
-      &:hover{
-        transform: unset;
-        z-index: 1;
-      }
-  
-      & img{
-        min-height: unset;
-      }
+
+    & .photo__gallery__main__wrapper__img {
+        height: auto;
+        width: 90%;
+
+        &:hover {
+            transform: unset;
+            z-index: 1;
+        }
+
+        & img {
+            min-height: unset;
+        }
     }
-  }
-  
-  .photo__gallery__quantity__block{
+}
+
+.photo__gallery__quantity__block {
     position: absolute;
     bottom: 2vw;
     left: 4vw;
-  
-    & .photo__gallery__quantity__box{
-      .box(100%);
-      .flex__box(row, flex-end);
-      .text(200%, 400, #FFF);
-      height: auto;
-      gap: 1vw;
-  
-      & *{
-        height: 1em;
-      }
+
+    & .photo__gallery__quantity__box {
+        .box(100%);
+        .flex__box(row, flex-end);
+        .text(200%, 400, #FFF);
+        height: auto;
+        gap: 1vw;
+
+        & * {
+            height: 1em;
+        }
     }
-  
-    & .photo__gallery__actuall__img{
-      .flex__box(row, flex-end);
-      .text(350%, 600, #FFF);
-      line-height: 65%;
+
+    & .photo__gallery__actuall__img {
+        .flex__box(row, flex-end);
+        .text(350%, 600, #FFF);
+        line-height: 65%;
     }
-  }
-  
-  .photo__gallery__closer__wrapper{
+}
+
+.photo__gallery__closer__wrapper {
     .closer__btn();
     z-index: 2;
-  }
-  
-  .photo__gallery__active{
+}
+
+.photo__gallery__active {
     position: relative;
     right: 1.8vw;
     transform: scale(1.3, 1.1);
     margin-top: 1vw;
     margin-bottom: 1vw;
-  
-    &:hover{
-      transform: scale(1.3, 1.1)!important;
+
+    &:hover {
+        transform: scale(1.3, 1.1) !important;
     }
-  }
+}
 
 /*============================= PHOTO__GALLERY__BLOCK ============================*/

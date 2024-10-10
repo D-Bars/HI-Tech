@@ -70,7 +70,7 @@ $services_count = count($services);
         <?php endif; ?>
       </div>
       <?php if ($services_count > 3): ?>
-        <div class="all__services__link"><a
+        <div><a class="all__services__link"
             href="<?php echo get_post_type_archive_link('services'); ?>"><?php _e('All services', 'hi-tech'); ?></a></div>
       <?php endif; ?>
     </div>
@@ -125,12 +125,22 @@ $photo_gallery = get_posts(array(
   'post_type' => 'photo gallery',
   'numberposts' => -1
 ));
+$count__photos__gallery = count($photo_gallery);
+$limited__photos = 8;
 ?>
 <?php if ($photo_gallery): ?>
   <div class="photo__gallery__main__block" id="gallery1">
-    <h2><?php _e('Showcase', 'hi-tech') ?></h2>
+    <div class="photo__gallery__title__btn__box">
+      <div class="photo__gallery__title__description__box">
+        <h2><?php _e('Showcase', 'hi-tech') ?><?php echo $count__photos__gallery; ?></h2>
+        <div class="photo__gallery__description"></div>
+      </div>
+      <?php if($count__photos__gallery > $limited__photos): ?>
+        <div><a class="photo__gallery__link" href="<?php //echo get_post_type_archive_link('photo-gallery'); ?>"> <?php _e('All Photos', 'hi-tech'); ?></a></div>
+      <?php endif; ?>
+    </div>
     <div class="photo__gallery__main__box">
-      <?php $i = 1; foreach ($photo_gallery as $post):
+      <?php $i = 1; foreach (array_slice($photo_gallery, 0, $limited__photos) as $post):
         setup_postdata($post);
         ?>
         <div class="photo__gallery__main__wrapper__img" img_pointer="<?php echo $i; ?>"><img
@@ -155,7 +165,7 @@ $photo_gallery = get_posts(array(
         <div class="photo__gallery__quantity__box">
           <div class="photo__gallery__actuall__img"></div>
           <span>/</span>
-          <div class="photo__gallery__all__img"><?php echo count($photo_gallery); ?></div>
+          <div class="photo__gallery__all__img"><?php echo ($count__photos__gallery > $limited__photos) ? $limited__photos : $count__photos__gallery; ?></div>
         </div>
       </div>
     </div>
