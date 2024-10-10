@@ -132,8 +132,10 @@ $limited__photos = 8;
   <div class="photo__gallery__main__block" id="gallery1">
     <div class="photo__gallery__title__btn__box">
       <div class="photo__gallery__title__description__box">
-        <h2><?php _e('Showcase', 'hi-tech') ?><?php echo $count__photos__gallery; ?></h2>
-        <div class="photo__gallery__description"></div>
+        <h2><?php _e('Showcase', 'hi-tech') ?></h2>
+        <?php if($theme__options['photo_gallery_description']) : ?>
+          <div class="photo__gallery__description"><?php echo esc_html($theme__options['photo_gallery_description']); ?></div>
+        <?php endif; ?>
       </div>
       <?php if($count__photos__gallery > $limited__photos): ?>
         <div><a class="photo__gallery__link" href="<?php //echo get_post_type_archive_link('photo-gallery'); ?>"> <?php _e('All Photos', 'hi-tech'); ?></a></div>

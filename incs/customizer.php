@@ -14,6 +14,14 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
         'type' => 'textarea'
     ));
 
+    //PHOTO GALLERY 
+    $wp_customize->add_setting('hi-tech_photo_gallery');
+    $wp_customize->add_control('hi-tech_photo_gallery', array(
+        'label' => __('Photo Gallery Description', 'hi-tech'),
+        'section' => 'hi-tech__theme__options',
+        'type' => 'textarea'
+    ));
+
     //SOCIAL MEDIA
 
     //Twiter
@@ -50,6 +58,7 @@ function hi_tech_theme_options()
     global $theme__options;
     $theme__options = array(
         'services_description' => get_theme_mod('hi-tech_service'),
+        'photo_gallery_description' => get_theme_mod('hi-tech_photo_gallery'),
         'twitter' => get_theme_mod('hi-tech_twiter'),
         'facebook' => get_theme_mod('hi-tech_facebook'),
         'instagram' => get_theme_mod('hi-tech_instagram'),

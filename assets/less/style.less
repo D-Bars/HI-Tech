@@ -880,10 +880,6 @@ footer {
     .flex__box(row, center, space-between);
 }
 
-.photo__gallery__description{
-    .text(100%, 600, @fontColor);
-}
-
 .photo__gallery__link{
     .text(130%, 800, @color1);
     background-color: fade(@color2, 60%);
@@ -899,14 +895,19 @@ footer {
 }
 
 .photo__gallery__title__description__box{
-    .box(45%);
+    .box(40%);
     .flex__box(column);
     gap: 1vw;
 }
 
+.photo__gallery__description{
+    .box(100%);
+    .text(90%, 600, @fontColor);
+}
+
 .photo__gallery__main__box {
     .box(100%);
-    margin-top: 3vw;
+    margin-top: 2vw;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
     grid-gap: 1vw 1vw;
