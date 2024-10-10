@@ -1085,3 +1085,51 @@ footer {
 }
 
 /*============================= ABOUT__US__BLOCK ============================*/
+
+/*============================= CONTACTS__BLOCK ============================*/
+
+.contacts__block{
+    .box(100%, 2.5%);
+    .flex__box(row, stretch);
+    margin-top: 2vw;
+}
+
+.contacts__box{
+    .box(50%, 2.5%);
+    .flex__box(column);
+    padding: 3vw 2.5%;
+    background-color: #FFF;
+    gap: 1.5vw;
+}
+
+.contacts__item{
+    .flex__box(row, center);
+    gap: 1vw;
+}
+
+.contacts__wrapper__img{
+    .img_box(3vw);
+
+    & img{
+        filter: invert(1);
+    }
+}
+
+.contacts__title__subtitle__box{
+    .flex__box(column);
+    gap: 0.5vw;
+}
+
+.contacts__box__title{
+    .text(110%, 800, @color1);
+}
+
+.contacts__box__subtitle{
+    .text(100%, 600, @fontColor);
+}
+
+.map__wrapper{
+    .box(50%);
+}
+
+/*============================= CONTACTS__BLOCK ============================*/

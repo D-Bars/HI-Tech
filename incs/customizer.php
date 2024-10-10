@@ -51,6 +51,43 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
         'label' => __('Youtube', 'hi-tech'),
         'section' => 'hi-tech__theme__options'
     ));
+
+    //CONTACTS
+
+    //Phone
+    $wp_customize->add_setting('hi-tech_phone');
+    $wp_customize->add_control('hi-tech_phone', array(
+        'label' => __('Phone', 'hi-tech'),
+        'section' => 'hi-tech__theme__options'
+    ));
+
+    //Email
+    $wp_customize->add_setting('hi-tech_email');
+    $wp_customize->add_control('hi-tech_email', array(
+        'label' => __('Email', 'hi-tech'),
+        'section' => 'hi-tech__theme__options'
+    ));
+
+    //NIP
+    $wp_customize->add_setting('hi-tech_nip');
+    $wp_customize->add_control('hi-tech_nip', array(
+        'label' => __('NIP', 'hi-tech'),
+        'section' => 'hi-tech__theme__options'
+    ));
+
+    //Adress
+    $wp_customize->add_setting('hi-tech_adress');
+    $wp_customize->add_control('hi-tech_adress', array(
+        'label' => __('Adress', 'hi-tech'),
+        'section' => 'hi-tech__theme__options'
+    ));
+
+    //Iframe
+    $wp_customize->add_setting('hi-tech_map');
+    $wp_customize->add_control('hi-tech_map', array(
+        'label' => __('Map(iframe)', 'hi-tech'),
+        'section' => 'hi-tech__theme__options'
+    ));
 });
 
 function hi_tech_theme_options()
@@ -58,11 +95,19 @@ function hi_tech_theme_options()
     global $theme__options;
     $theme__options = array(
         'services_description' => get_theme_mod('hi-tech_service'),
+
         'photo_gallery_description' => get_theme_mod('hi-tech_photo_gallery'),
+
         'twitter' => get_theme_mod('hi-tech_twiter'),
         'facebook' => get_theme_mod('hi-tech_facebook'),
         'instagram' => get_theme_mod('hi-tech_instagram'),
         'youtube' => get_theme_mod('hi-tech_youtube'),
+
+        'phone' => get_theme_mod('hi-tech_phone'),
+        'email' => get_theme_mod('hi-tech_email'),
+        'nip' => get_theme_mod('hi-tech_nip'),
+        'adress' => get_theme_mod('hi-tech_adress'),
+        'map' => get_theme_mod('hi-tech_map'),
     );
 }
 add_action('wp', 'hi_tech_theme_options');
